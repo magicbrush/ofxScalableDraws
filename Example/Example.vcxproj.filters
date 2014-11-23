@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="src\ofApp.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\main.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ofxTile.cpp">
+      <Filter>addons\ofxScalableFrame\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ofx3x3ScalableFrame.cpp">
+      <Filter>addons\ofxScalableFrame\src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{d8376475-7454-4a24-b08a-aac121d3ad6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons">
+      <UniqueIdentifier>{4444b570-2385-4060-917d-5a485d7613c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxScalableFrame">
+      <UniqueIdentifier>{6842dfb5-216e-4c2a-85d3-f4a5c233407b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxScalableFrame\src">
+      <UniqueIdentifier>{721c94c9-e0c8-4b09-9c2b-a4ea2f0203d2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\ofApp.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ofxTile.h">
+      <Filter>addons\ofxScalableFrame\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ofx3x3ScalableFrame.h">
+      <Filter>addons\ofxScalableFrame\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ofxScalableDraws.h">
+      <Filter>addons\ofxScalableFrame\src</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="icon.rc" />
+  </ItemGroup>
+</Project>
