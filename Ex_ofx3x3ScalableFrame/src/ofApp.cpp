@@ -8,13 +8,15 @@ void ofApp::setup(){
 	ICorner->loadImage("Corner.jpg");
 	IEdge.reset(new ofImage);
 	IEdge->loadImage("Edge.jpg");
-	TEdge.reset(new ofxTile(IEdge,true,false,false));
+	TEdge.reset(new ofxSDTile(IEdge,true,false,false));
 	IFill.reset(new ofImage);
 	IFill->loadImage("Fill.jpg");	
-	TFill.reset(new ofxTile(IFill,true,true,false));
-	sf3x3.reset(new ofx3x3ScalableFrame(ICorner,TEdge,TFill,45.0f));
+	TFill.reset(new ofxSDTile(IFill,true,true,false));	
+	sf3x3.reset(new ofxSD3x3ScalableFrame(ICorner,TEdge,TFill,45.0f));
 
-	DrawRect = ofRectangle(0,0,200,200);
+
+
+	DrawRect = ofRectangle(300,0,200,200);
 }
 
 //--------------------------------------------------------------
@@ -24,6 +26,12 @@ void ofApp::update(){
 
 //--------------------------------------------------------------
 void ofApp::draw(){
+	
+
+	ICorner->draw(0,0,100,100);
+	TEdge->draw(100,0,100,100);
+	TFill->draw(200,0,100,100);
+
 	ofPushMatrix();
 	sf3x3->draw(
 		DrawRect.x, 
@@ -31,7 +39,6 @@ void ofApp::draw(){
 		DrawRect.width,
 		DrawRect.height);
 	ofPopMatrix();
-
 
 	ofPushMatrix();
 	ofPushStyle();
@@ -41,10 +48,42 @@ void ofApp::draw(){
 	ofPopStyle();
 	ofPopMatrix();
 
+
+	float x = 10;
+	float y = 25;
+	float step = 25;
+
+	ofDrawBitmapString("mouse drag: define the frame rectangle",x,y);
+
 }
 
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
+
+	if(key=='1')
+	{
+		sf3x3->resetDrawsCorner();
+	}
+	else if(key=='2')
+	{
+		sf3x3->resetDrawsEdge();
+	}
+	else if(key=='3')
+	{
+		sf3x3->resetDrawsFill();
+	}
+	else if(key=='4')
+	{
+		sf3x3->setDrawsCorner(ICorner);
+	}
+	else if(key=='5')
+	{
+		sf3x3->setDrawsEdge(TEdge);
+	}
+	else if(key=='6')
+	{
+		sf3x3->setDrawsFill(TFill);
+	}
 
 }
 

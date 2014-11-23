@@ -2,7 +2,7 @@
 
 #include "ofMain.h"
 
-class ofxSDTile;
+class ofxSDRectFrame;
 
 class ofApp : public ofBaseApp{
 
@@ -21,10 +21,14 @@ class ofApp : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
 
-		ofPtr<ofxSDTile> pTile;
-		ofPtr<ofImage> I;
+private:
+	void setRectShape( int x, int y );
 
+private:
+	ofPtr<ofImage> ITile;
+	ofPtr<ofxSDRectFrame> RF;
 
-		float mx,my,mw,mh;
+	ofRectangle R;
+
 		
 };

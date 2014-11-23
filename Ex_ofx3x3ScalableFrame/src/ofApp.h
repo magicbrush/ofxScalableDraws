@@ -2,8 +2,8 @@
 
 #include "ofMain.h"
 
-class ofx3x3ScalableFrame;
-class ofxTile;
+class ofxSD3x3ScalableFrame;
+class ofxSDTile;
 
 class ofApp : public ofBaseApp{
 
@@ -29,13 +29,10 @@ private:
 private:
 	ofPtr<ofImage> ICorner;
 	ofPtr<ofImage> IEdge;
-	ofPtr<ofxTile> TEdge;
+	ofPtr<ofxSDTile> TEdge;
 	ofPtr<ofImage> IFill;
-	ofPtr<ofxTile> TFill;
-	ofPtr<ofx3x3ScalableFrame> sf3x3;
+	ofPtr<ofxSDTile> TFill;
+	ofPtr<ofxSD3x3ScalableFrame> sf3x3;
 
-
-	ofRectangle DrawRect;
-
-		
+	ofRectangle DrawRect;		
 };

@@ -1,12 +1,12 @@
 #include "ofApp.h"
-#include "ofxTile.h"
+#include "ofxSDTile.h"
 
 //--------------------------------------------------------------
 void ofApp::setup(){
 	I.reset(new ofImage);
 	I->loadImage("Tile.jpg");
 	I->resize(256,256);
-	pTile.reset(new ofxTile(I));	
+	pTile.reset(new ofxSDTile(I));	
 
 	mx = 100;
 	my = 0;

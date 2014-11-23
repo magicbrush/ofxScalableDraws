@@ -1,7 +1,7 @@
-#include "ofx3x3ScalableFrame.h"
+#include "ofxSD3x3ScalableFrame.h"
 
 
-ofx3x3ScalableFrame::ofx3x3ScalableFrame( 
+ofxSD3x3ScalableFrame::ofxSD3x3ScalableFrame( 
 	ofPtr<ofBaseDraws> drawsCorner, 
 	ofPtr<ofBaseDraws> drawsEdge, 
 	ofPtr<ofBaseDraws> drawsFill, 
@@ -18,62 +18,62 @@ ofx3x3ScalableFrame::ofx3x3ScalableFrame(
 
 }
 
-ofx3x3ScalableFrame::~ofx3x3ScalableFrame()
+ofxSD3x3ScalableFrame::~ofxSD3x3ScalableFrame()
 {
 
 }
 
-ofx3x3ScalableFrame::edgePosition ofx3x3ScalableFrame::getEdgePosition() const
+ofxSD3x3ScalableFrame::edgePosition ofxSD3x3ScalableFrame::getEdgePosition() const
 {
 	return (edgePosition)EdgePosition.get();
 }
 
-ofPtr<ofBaseDraws> ofx3x3ScalableFrame::getDrawsCorner() const
+ofPtr<ofBaseDraws> ofxSD3x3ScalableFrame::getDrawsCorner() const
 {
 	return DrawsCorner;
 }
 
-void ofx3x3ScalableFrame::setDrawsCorner( ofPtr<ofBaseDraws> val )
+void ofxSD3x3ScalableFrame::setDrawsCorner( ofPtr<ofBaseDraws> val )
 {
 	DrawsCorner = val;
 }
 
-ofPtr<ofBaseDraws> ofx3x3ScalableFrame::getDrawsEdge() const
+ofPtr<ofBaseDraws> ofxSD3x3ScalableFrame::getDrawsEdge() const
 {
 	return DrawsEdge;
 }
 
-void ofx3x3ScalableFrame::setDrawsEdge( ofPtr<ofBaseDraws> val )
+void ofxSD3x3ScalableFrame::setDrawsEdge( ofPtr<ofBaseDraws> val )
 {
 	DrawsEdge = val;
 }
 
-ofPtr<ofBaseDraws> ofx3x3ScalableFrame::getDrawsFill() const
+ofPtr<ofBaseDraws> ofxSD3x3ScalableFrame::getDrawsFill() const
 {
 	return DrawsFill;
 }
 
-void ofx3x3ScalableFrame::setDrawsFill( ofPtr<ofBaseDraws> val )
+void ofxSD3x3ScalableFrame::setDrawsFill( ofPtr<ofBaseDraws> val )
 {
 	DrawsFill = val;
 }
 
-float ofx3x3ScalableFrame::getEdge() const
+float ofxSD3x3ScalableFrame::getEdge() const
 {
 	return Edge;
 }
 
-void ofx3x3ScalableFrame::setEdge( float val )
+void ofxSD3x3ScalableFrame::setEdge( float val )
 {
 	Edge = val;
 }
 
-void ofx3x3ScalableFrame::setEdgePosition( edgePosition val )
+void ofxSD3x3ScalableFrame::setEdgePosition( edgePosition val )
 {
 	EdgePosition = val;
 }
 
-void ofx3x3ScalableFrame::draw( float x, float y )
+void ofxSD3x3ScalableFrame::draw( float x, float y )
 {
 	float w,h;
 	w = getWidth();
@@ -81,7 +81,7 @@ void ofx3x3ScalableFrame::draw( float x, float y )
 	draw(x,y,w,h);
 }
 
-void ofx3x3ScalableFrame::draw( float x, float y, float w, float h )
+void ofxSD3x3ScalableFrame::draw( float x, float y, float w, float h )
 {
 	float e = getE();
 	float ed = Edge;
@@ -106,32 +106,32 @@ void ofx3x3ScalableFrame::draw( float x, float y, float w, float h )
 
 }
 
-float ofx3x3ScalableFrame::getHeight()
+float ofxSD3x3ScalableFrame::getHeight()
 {
 	float e = getE();
 	float h = DrawsFill->getHeight()+2.0f*e;
 	return h;
 }
 
-float ofx3x3ScalableFrame::getWidth()
+float ofxSD3x3ScalableFrame::getWidth()
 {
 	float e = getE();
 	float w = DrawsFill->getWidth()+2.0f*e;
 	return w;
 }
 
-float ofx3x3ScalableFrame::getE()
+float ofxSD3x3ScalableFrame::getE()
 {
 	float e;
-	if(EdgePosition==SCALABLEFRAME_EDGE_OUT)
+	if(EdgePosition==OFXSD_SCALABLEFRAME_EDGE_OUT)
 	{
 		e = Edge;
 	}
-	else if(EdgePosition==SCALABLEFRAME_EDGE_CENTER)
+	else if(EdgePosition==OFXSD_SCALABLEFRAME_EDGE_CENTER)
 	{
 		e = Edge/2;
 	}
-	else if(EdgePosition==SCALABLEFRAME_EDGE_IN)
+	else if(EdgePosition==OFXSD_SCALABLEFRAME_EDGE_IN)
 	{
 		e = 0;
 	}	return e;
@@ -139,8 +139,13 @@ float ofx3x3ScalableFrame::getE()
 
 
 
-void ofx3x3ScalableFrame::drawCorners( float ed, float wdOut, float Rot, float htOut )
+void ofxSD3x3ScalableFrame::drawCorners( float ed, float wdOut, float Rot, float htOut )
 {
+	if(DrawsCorner.use_count()==0)
+	{
+		return;
+	}
+
 	DrawsCorner->draw(0,0,ed, ed);
 
 	ofTranslate(wdOut,0,0);
@@ -159,8 +164,13 @@ void ofx3x3ScalableFrame::drawCorners( float ed, float wdOut, float Rot, float h
 	ofRotate(Rot);
 }
 
-void ofx3x3ScalableFrame::drawEdges( float ed, float wdIn, float wdOut, float Rot, float htIn, float htOut )
+void ofxSD3x3ScalableFrame::drawEdges( float ed, float wdIn, float wdOut, float Rot, float htIn, float htOut )
 {
+	if(DrawsEdge.use_count()==0)
+	{
+		return;
+	}
+
 	DrawsEdge->draw(ed,0,wdIn,ed);
 
 	ofTranslate(wdOut,0,0);
@@ -174,15 +184,32 @@ void ofx3x3ScalableFrame::drawEdges( float ed, float wdIn, float wdOut, float Ro
 	ofTranslate(wdOut,0,0);
 	ofRotate(Rot);
 	DrawsEdge->draw(ed,0,htIn,ed);
-
 
 	ofTranslate(htOut,0,0);
 	ofRotate(Rot);
 }
 
-
-
-void ofx3x3ScalableFrame::drawFill( float ed, float wdIn, float htIn )
+void ofxSD3x3ScalableFrame::drawFill( float ed, float wdIn, float htIn )
 {
+	if(DrawsFill.use_count()==0)
+	{
+		return;
+	}
+
 	DrawsFill->draw(ed,ed,wdIn,htIn);
+}
+
+void ofxSD3x3ScalableFrame::resetDrawsCorner()
+{
+	DrawsCorner.reset();
+}
+
+void ofxSD3x3ScalableFrame::resetDrawsEdge()
+{
+	DrawsEdge.reset();
+}
+
+void ofxSD3x3ScalableFrame::resetDrawsFill()
+{
+	DrawsFill.reset();
 }

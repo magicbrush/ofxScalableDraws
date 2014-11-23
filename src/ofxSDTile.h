@@ -4,11 +4,11 @@
 
 #include "ofMain.h"
 
-class ofxTile:
+class ofxSDTile:
 	public ofBaseDraws
 {
 public:
-	ofxTile(
+	ofxSDTile(
 		ofPtr<ofBaseDraws> _baseTile, 
 		bool xtiling = true,
 		bool ytiling = true,
@@ -16,7 +16,7 @@ public:
 		bool trucateTiling = true,
 		ofVec2f Scl= ofVec2f(1.0f,1.0f),
 		ofVec2f Tran= ofVec2f(0.0f,0.0f));
-	~ofxTile();
+	~ofxSDTile();
 	
 	ofPtr<ofBaseDraws> baseTile() const;
 	void baseTile(ofPtr<ofBaseDraws> val);

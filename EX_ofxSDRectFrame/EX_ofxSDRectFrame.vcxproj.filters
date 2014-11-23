@@ -8,16 +8,16 @@
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="..\src\ofxSD3x3ScalableFrame.cpp">
-      <Filter>addons\ofxScalableFrame\src</Filter>
+      <Filter>addons\ofxScalableDraws\src</Filter>
     </ClCompile>
     <ClCompile Include="..\src\ofxSDTile.cpp">
-      <Filter>addons\ofxScalableFrame\src</Filter>
+      <Filter>addons\ofxScalableDraws\src</Filter>
     </ClCompile>
     <ClCompile Include="..\src\ofxSDRectFrame.cpp">
-      <Filter>addons\ofxScalableFrame\src</Filter>
+      <Filter>addons\ofxScalableDraws\src</Filter>
     </ClCompile>
     <ClCompile Include="..\src\ofxSDUtils.cpp">
-      <Filter>addons\ofxScalableFrame\src</Filter>
+      <Filter>addons\ofxScalableDraws\src</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -27,31 +27,31 @@
     <Filter Include="addons">
       <UniqueIdentifier>{71834F65-F3A9-211E-73B8-DC85}</UniqueIdentifier>
     </Filter>
-    <Filter Include="addons\ofxScalableFrame">
-      <UniqueIdentifier>{FD1EBECC-6426-A7FD-7428-8435}</UniqueIdentifier>
+    <Filter Include="addons\ofxScalableDraws">
+      <UniqueIdentifier>{9D6C45F2-C676-33DE-53EC-4824}</UniqueIdentifier>
     </Filter>
-    <Filter Include="addons\ofxScalableFrame\src">
-      <UniqueIdentifier>{24706033-FB61-6FF0-CC85-FD04}</UniqueIdentifier>
+    <Filter Include="addons\ofxScalableDraws\src">
+      <UniqueIdentifier>{3DAF5964-2582-88F8-05F0-A771}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\ofApp.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\ofxScalableDraws.h">
-      <Filter>addons\ofxScalableFrame\src</Filter>
+    <ClInclude Include="..\..\..\addons\ofxScalableDraws\src\ofxScalableDraws.h">
+      <Filter>addons\ofxScalableDraws\src</Filter>
     </ClInclude>
     <ClInclude Include="..\src\ofxSD3x3ScalableFrame.h">
-      <Filter>addons\ofxScalableFrame\src</Filter>
+      <Filter>addons\ofxScalableDraws\src</Filter>
     </ClInclude>
     <ClInclude Include="..\src\ofxSDTile.h">
-      <Filter>addons\ofxScalableFrame\src</Filter>
+      <Filter>addons\ofxScalableDraws\src</Filter>
     </ClInclude>
     <ClInclude Include="..\src\ofxSDRectFrame.h">
-      <Filter>addons\ofxScalableFrame\src</Filter>
+      <Filter>addons\ofxScalableDraws\src</Filter>
     </ClInclude>
     <ClInclude Include="..\src\ofxSDUtils.h">
-      <Filter>addons\ofxScalableFrame\src</Filter>
+      <Filter>addons\ofxScalableDraws\src</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

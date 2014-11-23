@@ -4,25 +4,25 @@
 
 #include "ofMain.h"
 
-class ofx3x3ScalableFrame:
+class ofxSD3x3ScalableFrame:
 	public ofBaseDraws
 {
 public:
 	enum edgePosition
 	{
-		SCALABLEFRAME_EDGE_OUT,
-		SCALABLEFRAME_EDGE_CENTER,
-		SCALABLEFRAME_EDGE_IN
+		OFXSD_SCALABLEFRAME_EDGE_OUT,
+		OFXSD_SCALABLEFRAME_EDGE_CENTER,
+		OFXSD_SCALABLEFRAME_EDGE_IN
 	};
 
 public:
-	ofx3x3ScalableFrame(
+	ofxSD3x3ScalableFrame(
 		ofPtr<ofBaseDraws> drawsCorner,
 		ofPtr<ofBaseDraws> drawsEdge,
 		ofPtr<ofBaseDraws> drawsFill,
 		float edge=20.0f,
-		edgePosition edgePos = SCALABLEFRAME_EDGE_IN );
-	~ofx3x3ScalableFrame();
+		edgePosition edgePos = OFXSD_SCALABLEFRAME_EDGE_IN );
+	~ofxSD3x3ScalableFrame();
 
 	ofPtr<ofBaseDraws> getDrawsCorner() const;
 	void setDrawsCorner(ofPtr<ofBaseDraws> val);
@@ -40,6 +40,12 @@ public:
 	
 	virtual float getHeight();
 	virtual float getWidth();
+
+public:
+	// debug
+	void resetDrawsCorner();
+	void resetDrawsEdge();
+	void resetDrawsFill();
 
 private:
 	float getE( );

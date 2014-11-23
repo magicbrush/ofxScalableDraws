@@ -7,10 +7,10 @@
     <ClCompile Include="src\main.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\ofxTile.cpp">
+    <ClCompile Include="..\src\ofxSD3x3ScalableFrame.cpp">
       <Filter>addons\ofxScalableFrame\src</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\ofx3x3ScalableFrame.cpp">
+    <ClCompile Include="..\src\ofxSDTile.cpp">
       <Filter>addons\ofxScalableFrame\src</Filter>
     </ClCompile>
   </ItemGroup>
@@ -32,13 +32,13 @@
     <ClInclude Include="src\ofApp.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\ofxTile.h">
-      <Filter>addons\ofxScalableFrame\src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\ofx3x3ScalableFrame.h">
-      <Filter>addons\ofxScalableFrame\src</Filter>
-    </ClInclude>
     <ClInclude Include="..\src\ofxScalableDraws.h">
+      <Filter>addons\ofxScalableFrame\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ofxSD3x3ScalableFrame.h">
+      <Filter>addons\ofxScalableFrame\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ofxSDTile.h">
       <Filter>addons\ofxScalableFrame\src</Filter>
     </ClInclude>
   </ItemGroup>

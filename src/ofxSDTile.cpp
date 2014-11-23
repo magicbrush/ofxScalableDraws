@@ -1,8 +1,8 @@
-#include "ofxTile.h"
+#include "ofxSDTile.h"
 
 
 
-ofxTile::ofxTile( 
+ofxSDTile::ofxSDTile( 
 	ofPtr<ofBaseDraws> _baseTile,
 	bool xtiling,
 	bool ytiling,
@@ -32,20 +32,19 @@ ofxTile::ofxTile(
 	baseTile(_baseTile);
 
 	setRepeatMode(mirrorRepeat);
-
 }
 
-ofxTile::~ofxTile()
+ofxSDTile::~ofxSDTile()
 {
 
 }
 
-void ofxTile::draw( float x, float y )
+void ofxSDTile::draw( float x, float y )
 {	
 	BaseTile->draw(x,y);
 }
 
-void ofxTile::draw( float x, float y, float w, float h )
+void ofxSDTile::draw( float x, float y, float w, float h )
 {
 	copyBaseTileToFbo();
 
@@ -62,28 +61,28 @@ void ofxTile::draw( float x, float y, float w, float h )
 	ofPopStyle();	
 }
 
-float ofxTile::getHeight()
+float ofxSDTile::getHeight()
 {
 	return BaseTile->getHeight();
 }
 
-float ofxTile::getWidth()
+float ofxSDTile::getWidth()
 {
 	return BaseTile->getWidth();
 }
 
-ofPtr<ofBaseDraws> ofxTile::baseTile() const
+ofPtr<ofBaseDraws> ofxSDTile::baseTile() const
 {
 	return BaseTile;
 }
 
-void ofxTile::baseTile( ofPtr<ofBaseDraws> val )
+void ofxSDTile::baseTile( ofPtr<ofBaseDraws> val )
 {
 	BaseTile = val;	
 	resizeFboToBaseTile();
 }
 
-void ofxTile::resizeFboToBaseTile() const
+void ofxSDTile::resizeFboToBaseTile() const
 {
 	float tw,th;
 	tw = BaseTile->getWidth();
@@ -96,7 +95,7 @@ void ofxTile::resizeFboToBaseTile() const
 	}
 }
 
-void ofxTile::copyBaseTileToFbo()
+void ofxSDTile::copyBaseTileToFbo()
 {
 	pF->begin();
 	pushMSV();
@@ -105,21 +104,21 @@ void ofxTile::copyBaseTileToFbo()
 	pF->end();
 }
 
-void ofxTile::pushMSV()
+void ofxSDTile::pushMSV()
 {
 	ofPushView();
 	ofPushMatrix();
 	ofPushStyle();
 }
 
-void ofxTile::popMSV()
+void ofxSDTile::popMSV()
 {
 	ofPopStyle();
 	ofPopMatrix();
 	ofPopView();
 }
 
-void ofxTile::initFbo()
+void ofxSDTile::initFbo()
 {
 	if(pF.use_count()==0)
 	{
@@ -127,7 +126,7 @@ void ofxTile::initFbo()
 	}
 }
 
-void ofxTile::initMesh()
+void ofxSDTile::initMesh()
 {
 	M.clear();
 
@@ -145,7 +144,7 @@ void ofxTile::initMesh()
 	M.addIndices(id,6);
 }
 
-void ofxTile::setMeshTexCoords( float w, float h )
+void ofxSDTile::setMeshTexCoords( float w, float h )
 {
 	ofVec2f S = Scale;
 	ofVec2f TPct = TransPct;
@@ -185,22 +184,22 @@ void ofxTile::setMeshTexCoords( float w, float h )
 	M.addTexCoord(ofVec2f(xmin,ymax));
 }
 
-ofVec2f ofxTile::getScale() const
+ofVec2f ofxSDTile::getScale() const
 {
 	return Scale;
 }
 
-void ofxTile::setScale( ofVec2f val )
+void ofxSDTile::setScale( ofVec2f val )
 {
 	Scale = val;
 }
 
-void ofxTile::setAnchorPercent( float xPct, float yPct )
+void ofxSDTile::setAnchorPercent( float xPct, float yPct )
 {
 	TransPct = ofVec2f(xPct,yPct);
 }
 
-void ofxTile::setAnchorPoint( float x, float y )
+void ofxSDTile::setAnchorPoint( float x, float y )
 {
 	float tw = BaseTile->getWidth();
 	float th = BaseTile->getHeight();
@@ -212,12 +211,12 @@ void ofxTile::setAnchorPoint( float x, float y )
 	setAnchorPercent(xPct,yPct);
 }
 
-void ofxTile::resetAnchor()
+void ofxSDTile::resetAnchor()
 {
 	setAnchorPercent(0,0);
 }
 
-void ofxTile::setRepeatMode( bool mirrorRepeat )
+void ofxSDTile::setRepeatMode( bool mirrorRepeat )
 {
 	if(mirrorRepeat)
 	{
@@ -232,17 +231,17 @@ void ofxTile::setRepeatMode( bool mirrorRepeat )
 	T.setTextureWrap(TexWrap,TexWrap);
 }
 
-bool ofxTile::getTruncateTiling() const
+bool ofxSDTile::getTruncateTiling() const
 {
 	return TrucateTiling;
 }
 
-void ofxTile::setTrucateTiling( bool val )
+void ofxSDTile::setTrucateTiling( bool val )
 {
 	TrucateTiling = val;
 }
 
-bool ofxTile::getRepeatMode()
+bool ofxSDTile::getRepeatMode()
 {
 	if(TexWrap == GL_MIRRORED_REPEAT)
 	{
