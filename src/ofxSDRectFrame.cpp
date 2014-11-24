@@ -184,10 +184,10 @@ void ofxSDRectFrame::computeMFrame()
 	float LenTotal = PIn.getLengthAtIndex(PIn.size()-1);
 	int numSection = LenTotal/SectionLength;
 	float sectLen = LenTotal/numSection;
-	ofIndexType index = -1;
+	ofIndexType index = -1;	
 	for(float len = 0.0f;len<LenTotal+0.001f;len+= sectLen)
 	{
-		float id = PIn.getIndexAtLength(len);
+		float id = PIn.getIndexAtLength(len);		
 
 		ofPoint ptIn = PIn.getPointAtIndexInterpolated(id);
 		ofPoint ptOut = POut.getPointAtIndexInterpolated(id);

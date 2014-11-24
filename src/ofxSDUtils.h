@@ -9,6 +9,11 @@ namespace sd
 	void pushMSV();
 	void popMSV();
 
+	void copyBaseDrawsToFbo(
+		ofBaseDraws* pdraws,
+		ofFbo* pF);
+
+
 }
 
 

@@ -2,7 +2,7 @@
 
 #include "ofMain.h"
 
-class ofxSD3x3ScalableFrame;
+class ofxSDCornerEdgeFill;
 class ofxSDTile;
 
 class ofApp : public ofBaseApp{
@@ -32,7 +32,7 @@ private:
 	ofPtr<ofxSDTile> TEdge;
 	ofPtr<ofImage> IFill;
 	ofPtr<ofxSDTile> TFill;
-	ofPtr<ofxSD3x3ScalableFrame> sf3x3;
+	ofPtr<ofxSDCornerEdgeFill> sf3x3;
 
 	ofRectangle DrawRect;		
 };

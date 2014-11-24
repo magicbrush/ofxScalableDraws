@@ -7,16 +7,19 @@
     <ClCompile Include="src\main.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\ofxSDCornerEdgeFill.cpp">
+    <ClCompile Include="..\..\..\addons\ofxScalableDraws\src\ofxSDCornerEdgeFill.cpp">
       <Filter>addons\ofxScalableDraws\src</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\ofxSDRectFrame.cpp">
+    <ClCompile Include="..\..\..\addons\ofxScalableDraws\src\ofxSDRectFrame.cpp">
       <Filter>addons\ofxScalableDraws\src</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\ofxSDTile.cpp">
+    <ClCompile Include="..\..\..\addons\ofxScalableDraws\src\ofxSDTile.cpp">
       <Filter>addons\ofxScalableDraws\src</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\ofxSDUtils.cpp">
+    <ClCompile Include="..\..\..\addons\ofxScalableDraws\src\ofxSDUtils.cpp">
+      <Filter>addons\ofxScalableDraws\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ofxSDPathTiler.cpp">
       <Filter>addons\ofxScalableDraws\src</Filter>
     </ClCompile>
   </ItemGroup>
@@ -38,19 +41,22 @@
     <ClInclude Include="src\ofApp.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\ofxScalableDraws.h">
+    <ClInclude Include="..\..\..\addons\ofxScalableDraws\src\ofxScalableDraws.h">
       <Filter>addons\ofxScalableDraws\src</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\ofxSDCornerEdgeFill.h">
+    <ClInclude Include="..\..\..\addons\ofxScalableDraws\src\ofxSDCornerEdgeFill.h">
       <Filter>addons\ofxScalableDraws\src</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\ofxSDRectFrame.h">
+    <ClInclude Include="..\..\..\addons\ofxScalableDraws\src\ofxSDRectFrame.h">
       <Filter>addons\ofxScalableDraws\src</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\ofxSDTile.h">
+    <ClInclude Include="..\..\..\addons\ofxScalableDraws\src\ofxSDTile.h">
       <Filter>addons\ofxScalableDraws\src</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\ofxSDUtils.h">
+    <ClInclude Include="..\..\..\addons\ofxScalableDraws\src\ofxSDUtils.h">
+      <Filter>addons\ofxScalableDraws\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ofxSDPathTiler.h">
       <Filter>addons\ofxScalableDraws\src</Filter>
     </ClInclude>
   </ItemGroup>

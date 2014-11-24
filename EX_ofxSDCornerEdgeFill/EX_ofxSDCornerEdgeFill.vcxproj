@@ -11,9 +11,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{4C90E7A7-22E7-408B-BE2D-FE7A738F4730}</ProjectGuid>
+    <ProjectGuid>{662CB0E0-ECD1-4171-9D57-52578A7F39EF}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>EX_ofxSDRectFrame</RootNamespace>
+    <RootNamespace>EX_ofxSDCornerEdgeFill</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -31,10 +31,12 @@
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
     <Import Project="..\..\..\libs\openFrameworksCompiled\project\vs\openFrameworksRelease.props" />
+    <Import Project="..\ofxScalableFrame.props" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
     <Import Project="..\..\..\libs\openFrameworksCompiled\project\vs\openFrameworksDebug.props" />
+    <Import Project="..\ofxScalableFrame.props" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -68,9 +70,6 @@
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
-    <PostBuildEvent>
-      <Command>xcopy /e /i /y "$(ProjectDir)..\..\..\export\vs\*.dll" "$(ProjectDir)..\bin"</Command>
-    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -93,20 +92,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\src\ofxSDCornerEdgeFill.cpp" />
-    <ClCompile Include="..\src\ofxSDRectFrame.cpp" />
-    <ClCompile Include="..\src\ofxSDTile.cpp" />
-    <ClCompile Include="..\src\ofxSDUtils.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\ofApp.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxScalableDraws\src\ofxSDCornerEdgeFill.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxScalableDraws\src\ofxSDRectFrame.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxScalableDraws\src\ofxSDTile.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxScalableDraws\src\ofxSDUtils.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\src\ofxScalableDraws.h" />
-    <ClInclude Include="..\src\ofxSDCornerEdgeFill.h" />
-    <ClInclude Include="..\src\ofxSDRectFrame.h" />
-    <ClInclude Include="..\src\ofxSDTile.h" />
-    <ClInclude Include="..\src\ofxSDUtils.h" />
     <ClInclude Include="src\ofApp.h" />
+    <ClInclude Include="..\..\..\addons\ofxScalableDraws\src\ofxScalableDraws.h" />
+    <ClInclude Include="..\..\..\addons\ofxScalableDraws\src\ofxSDCornerEdgeFill.h" />
+    <ClInclude Include="..\..\..\addons\ofxScalableDraws\src\ofxSDRectFrame.h" />
+    <ClInclude Include="..\..\..\addons\ofxScalableDraws\src\ofxSDTile.h" />
+    <ClInclude Include="..\..\..\addons\ofxScalableDraws\src\ofxSDUtils.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\libs\openFrameworksCompiled\project\vs\openframeworksLib.vcxproj">

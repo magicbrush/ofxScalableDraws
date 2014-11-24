@@ -5,5 +5,6 @@
 #include "ofxSDTile.h"
 #include "ofxSDCornerEdgeFill.h"
 #include "ofxSDRectFrame.h"
+#include "ofxSDPathTiler.h"
 
 #endif

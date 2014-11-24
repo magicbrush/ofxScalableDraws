@@ -1,12 +1,14 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Example_ofxTile", "Example.vcxproj", "{7FD42DF7-442E-479A-BA76-D0022F99702A}"
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "openframeworksLib", "..\..\..\libs\openFrameworksCompiled\project\vs\openframeworksLib.vcxproj", "{5837595D-ACA9-485C-8E76-729040CE4B0B}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Ex_ofx3x3ScalableFrame", "..\Ex_ofx3x3ScalableFrame\Ex_ofx3x3ScalableFrame.vcxproj", "{9F04F550-3AA4-4966-BE24-3E11B87C264D}"
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "EX_ofxSDRectFrame", "..\EX_ofxSDRectFrame\EX_ofxSDRectFrame.vcxproj", "{4C90E7A7-22E7-408B-BE2D-FE7A738F4730}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "EX_ofxSDCornerEdgeFill", "..\EX_ofxSDCornerEdgeFill\EX_ofxSDCornerEdgeFill.vcxproj", "{662CB0E0-ECD1-4171-9D57-52578A7F39EF}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "EX_ofxSDTile", "..\EX_ofxSDTile\EX_ofxSDTile.vcxproj", "{7951EC66-E3E8-47C6-B7AE-B89B0164C552}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "EX_ofxSDPathTiler", "..\EX_ofxSDPathTiler\EX_ofxSDPathTiler.vcxproj", "{7FD42DF7-442E-479A-BA76-D0022F99702A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -14,22 +16,26 @@ Global
 		Release|Win32 = Release|Win32
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{7FD42DF7-442E-479A-BA76-D0022F99702A}.Debug|Win32.ActiveCfg = Debug|Win32
-		{7FD42DF7-442E-479A-BA76-D0022F99702A}.Debug|Win32.Build.0 = Debug|Win32
-		{7FD42DF7-442E-479A-BA76-D0022F99702A}.Release|Win32.ActiveCfg = Release|Win32
-		{7FD42DF7-442E-479A-BA76-D0022F99702A}.Release|Win32.Build.0 = Release|Win32
 		{5837595D-ACA9-485C-8E76-729040CE4B0B}.Debug|Win32.ActiveCfg = Debug|Win32
 		{5837595D-ACA9-485C-8E76-729040CE4B0B}.Debug|Win32.Build.0 = Debug|Win32
 		{5837595D-ACA9-485C-8E76-729040CE4B0B}.Release|Win32.ActiveCfg = Release|Win32
 		{5837595D-ACA9-485C-8E76-729040CE4B0B}.Release|Win32.Build.0 = Release|Win32
-		{9F04F550-3AA4-4966-BE24-3E11B87C264D}.Debug|Win32.ActiveCfg = Debug|Win32
-		{9F04F550-3AA4-4966-BE24-3E11B87C264D}.Debug|Win32.Build.0 = Debug|Win32
-		{9F04F550-3AA4-4966-BE24-3E11B87C264D}.Release|Win32.ActiveCfg = Release|Win32
-		{9F04F550-3AA4-4966-BE24-3E11B87C264D}.Release|Win32.Build.0 = Release|Win32
 		{4C90E7A7-22E7-408B-BE2D-FE7A738F4730}.Debug|Win32.ActiveCfg = Debug|Win32
 		{4C90E7A7-22E7-408B-BE2D-FE7A738F4730}.Debug|Win32.Build.0 = Debug|Win32
 		{4C90E7A7-22E7-408B-BE2D-FE7A738F4730}.Release|Win32.ActiveCfg = Release|Win32
 		{4C90E7A7-22E7-408B-BE2D-FE7A738F4730}.Release|Win32.Build.0 = Release|Win32
+		{662CB0E0-ECD1-4171-9D57-52578A7F39EF}.Debug|Win32.ActiveCfg = Debug|Win32
+		{662CB0E0-ECD1-4171-9D57-52578A7F39EF}.Debug|Win32.Build.0 = Debug|Win32
+		{662CB0E0-ECD1-4171-9D57-52578A7F39EF}.Release|Win32.ActiveCfg = Release|Win32
+		{662CB0E0-ECD1-4171-9D57-52578A7F39EF}.Release|Win32.Build.0 = Release|Win32
+		{7951EC66-E3E8-47C6-B7AE-B89B0164C552}.Debug|Win32.ActiveCfg = Debug|Win32
+		{7951EC66-E3E8-47C6-B7AE-B89B0164C552}.Debug|Win32.Build.0 = Debug|Win32
+		{7951EC66-E3E8-47C6-B7AE-B89B0164C552}.Release|Win32.ActiveCfg = Release|Win32
+		{7951EC66-E3E8-47C6-B7AE-B89B0164C552}.Release|Win32.Build.0 = Release|Win32
+		{7FD42DF7-442E-479A-BA76-D0022F99702A}.Debug|Win32.ActiveCfg = Debug|Win32
+		{7FD42DF7-442E-479A-BA76-D0022F99702A}.Debug|Win32.Build.0 = Debug|Win32
+		{7FD42DF7-442E-479A-BA76-D0022F99702A}.Release|Win32.ActiveCfg = Release|Win32
+		{7FD42DF7-442E-479A-BA76-D0022F99702A}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

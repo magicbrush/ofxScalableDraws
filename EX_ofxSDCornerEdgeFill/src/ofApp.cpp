@@ -12,7 +12,7 @@ void ofApp::setup(){
 	IFill.reset(new ofImage);
 	IFill->loadImage("Fill.jpg");	
 	TFill.reset(new ofxSDTile(IFill,true,true,false));	
-	sf3x3.reset(new ofxSD3x3ScalableFrame(ICorner,TEdge,TFill,45.0f));
+	sf3x3.reset(new ofxSDCornerEdgeFill(ICorner,TEdge,TFill,45.0f));
 
 
 

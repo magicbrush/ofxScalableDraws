@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ItemGroup>
+		<ClCompile Include="src\ofApp.cpp">
+			<Filter>src</Filter>
+		</ClCompile>
+		<ClCompile Include="src\main.cpp">
+			<Filter>src</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\addons\ofxScalableDraws\src\ofxSDCornerEdgeFill.cpp">
+			<Filter>addons\ofxScalableDraws\src</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\addons\ofxScalableDraws\src\ofxSDRectFrame.cpp">
+			<Filter>addons\ofxScalableDraws\src</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\addons\ofxScalableDraws\src\ofxSDTile.cpp">
+			<Filter>addons\ofxScalableDraws\src</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\addons\ofxScalableDraws\src\ofxSDUtils.cpp">
+			<Filter>addons\ofxScalableDraws\src</Filter>
+		</ClCompile>
+	</ItemGroup>
+	<ItemGroup>
+		<Filter Include="src">
+			<UniqueIdentifier>{d8376475-7454-4a24-b08a-aac121d3ad6f}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons">
+			<UniqueIdentifier>{71834F65-F3A9-211E-73B8-DC85}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxScalableDraws">
+			<UniqueIdentifier>{9D6C45F2-C676-33DE-53EC-4824}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxScalableDraws\src">
+			<UniqueIdentifier>{3DAF5964-2582-88F8-05F0-A771}</UniqueIdentifier>
+		</Filter>
+	</ItemGroup>
+	<ItemGroup>
+		<ClInclude Include="src\ofApp.h">
+			<Filter>src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxScalableDraws\src\ofxScalableDraws.h">
+			<Filter>addons\ofxScalableDraws\src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxScalableDraws\src\ofxSDCornerEdgeFill.h">
+			<Filter>addons\ofxScalableDraws\src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxScalableDraws\src\ofxSDRectFrame.h">
+			<Filter>addons\ofxScalableDraws\src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxScalableDraws\src\ofxSDTile.h">
+			<Filter>addons\ofxScalableDraws\src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxScalableDraws\src\ofxSDUtils.h">
+			<Filter>addons\ofxScalableDraws\src</Filter>
+		</ClInclude>
+	</ItemGroup>
+	<ItemGroup>
+		<ResourceCompile Include="icon.rc" />
+	</ItemGroup>
+</Project>
