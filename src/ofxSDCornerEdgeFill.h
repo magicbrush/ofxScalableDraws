@@ -4,7 +4,7 @@
 
 #include "ofMain.h"
 
-class ofxSD3x3ScalableFrame:
+class ofxSDCornerEdgeFill:
 	public ofBaseDraws
 {
 public:
@@ -16,13 +16,13 @@ public:
 	};
 
 public:
-	ofxSD3x3ScalableFrame(
+	ofxSDCornerEdgeFill(
 		ofPtr<ofBaseDraws> drawsCorner,
 		ofPtr<ofBaseDraws> drawsEdge,
 		ofPtr<ofBaseDraws> drawsFill,
 		float edge=20.0f,
 		edgePosition edgePos = OFXSD_SCALABLEFRAME_EDGE_IN );
-	~ofxSD3x3ScalableFrame();
+	~ofxSDCornerEdgeFill();
 
 	ofPtr<ofBaseDraws> getDrawsCorner() const;
 	void setDrawsCorner(ofPtr<ofBaseDraws> val);

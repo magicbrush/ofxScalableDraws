@@ -96,15 +96,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\src\ofxSD3x3ScalableFrame.cpp" />
+    <ClCompile Include="..\src\ofxSDCornerEdgeFill.cpp" />
+    <ClCompile Include="..\src\ofxSDRectFrame.cpp" />
     <ClCompile Include="..\src\ofxSDTile.cpp" />
+    <ClCompile Include="..\src\ofxSDUtils.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\ofApp.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\ofxScalableDraws.h" />
-    <ClInclude Include="..\src\ofxSD3x3ScalableFrame.h" />
+    <ClInclude Include="..\src\ofxSDCornerEdgeFill.h" />
+    <ClInclude Include="..\src\ofxSDRectFrame.h" />
     <ClInclude Include="..\src\ofxSDTile.h" />
+    <ClInclude Include="..\src\ofxSDUtils.h" />
     <ClInclude Include="src\ofApp.h" />
   </ItemGroup>
   <ItemGroup>

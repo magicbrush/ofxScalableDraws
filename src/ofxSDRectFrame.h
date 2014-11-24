@@ -10,16 +10,16 @@ class ofxSDRectFrame:
 public:
 	enum FramePositon
 	{
-		OFXSD_RECTFRAME_CENTER,
-		OFXSD_RECTFRAME_IN,
-		OFXSD_RECTFRAME_OUT
+		RECTFRAME_CENTER,
+		RECTFRAME_IN,
+		RECTFRAME_OUT
 	};
 
 public:
 	ofxSDRectFrame(ofPtr<ofBaseDraws> pTile,
 		float edge = 40.0f,
 		float sectionLen = 40.0f,
-		FramePositon framePos = OFXSD_RECTFRAME_IN,
+		FramePositon framePos = RECTFRAME_IN,
 		bool wrapXMirrored = false);
 	~ofxSDRectFrame();
 

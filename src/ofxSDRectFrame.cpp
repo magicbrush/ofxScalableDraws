@@ -126,15 +126,15 @@ void ofxSDRectFrame::setTile( ofPtr<ofBaseDraws> val )
 float ofxSDRectFrame::getShiftOut(  )
 {
 	float e;
-	if(FramePos==OFXSD_RECTFRAME_OUT)
+	if(FramePos==RECTFRAME_OUT)
 	{
 		e = Edge;
 	}
-	else if(FramePos==OFXSD_RECTFRAME_CENTER)
+	else if(FramePos==RECTFRAME_CENTER)
 	{
 		e = Edge/2.0f;
 	}
-	else if(FramePos==OFXSD_RECTFRAME_IN)
+	else if(FramePos==RECTFRAME_IN)
 	{
 		e = 0;
 	}	return e;

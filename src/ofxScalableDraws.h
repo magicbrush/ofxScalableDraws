@@ -3,7 +3,7 @@
 #define OFXSCALABLEDRAWS_H
 
 #include "ofxSDTile.h"
-#include "ofxSD3x3ScalableFrame.h"
+#include "ofxSDCornerEdgeFill.h"
 #include "ofxSDRectFrame.h"
 
 #endif
