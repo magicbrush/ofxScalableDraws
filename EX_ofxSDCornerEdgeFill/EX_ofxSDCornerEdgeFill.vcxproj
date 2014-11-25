@@ -92,6 +92,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\src\ofxSDPathTiler.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\ofApp.cpp" />
     <ClCompile Include="..\..\..\addons\ofxScalableDraws\src\ofxSDCornerEdgeFill.cpp" />
@@ -100,6 +101,7 @@
     <ClCompile Include="..\..\..\addons\ofxScalableDraws\src\ofxSDUtils.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\src\ofxSDPathTiler.h" />
     <ClInclude Include="src\ofApp.h" />
     <ClInclude Include="..\..\..\addons\ofxScalableDraws\src\ofxScalableDraws.h" />
     <ClInclude Include="..\..\..\addons\ofxScalableDraws\src\ofxSDCornerEdgeFill.h" />

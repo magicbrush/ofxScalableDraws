@@ -94,6 +94,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\src\ofxSDCornerEdgeFill.cpp" />
+    <ClCompile Include="..\src\ofxSDPathTiler.cpp" />
     <ClCompile Include="..\src\ofxSDRectFrame.cpp" />
     <ClCompile Include="..\src\ofxSDTile.cpp" />
     <ClCompile Include="..\src\ofxSDUtils.cpp" />
@@ -103,6 +104,7 @@
   <ItemGroup>
     <ClInclude Include="..\src\ofxScalableDraws.h" />
     <ClInclude Include="..\src\ofxSDCornerEdgeFill.h" />
+    <ClInclude Include="..\src\ofxSDPathTiler.h" />
     <ClInclude Include="..\src\ofxSDRectFrame.h" />
     <ClInclude Include="..\src\ofxSDTile.h" />
     <ClInclude Include="..\src\ofxSDUtils.h" />

@@ -66,6 +66,14 @@ void ofxSDPathTiler::setPath( ofPath& pth )
 	//PathBoundRect =computePathBoundingBox();
 }
 
+void ofxSDPathTiler::setPolyline( ofPolyline& p )
+{
+	P->clear();
+	M->clear();
+
+	addPolyline(p);
+}
+
 void ofxSDPathTiler::addPolyline( ofPolyline& p )
 {
 	if(p.size()==0)
@@ -210,8 +218,7 @@ ofRectangle ofxSDPathTiler::computePathBoundingBox(  )
 }
 
 void ofxSDPathTiler::tileMeshAlongPolyline( ofPolyline &p )
-{
-	
+{	
 	float idSec = 0;
 	int idVt = -1 + M->getNumVertices();
 	for(float dist = 0;
@@ -220,18 +227,21 @@ void ofxSDPathTiler::tileMeshAlongPolyline( ofPolyline &p )
 	{
 		float id = p.getIndexAtLength(dist);
 		ofPoint Pid = p.getPointAtLength(dist);
-		ofVec3f N = p.getNormalAtIndexInterpolated(id);
+		ofVec3f N = p.getNormalAtIndexInterpolated(id);		
 
-		ofVec3f shift = N*(Breadth/2.0f + Offset);
-		ofPoint Pin = Pid - shift;
-		ofPoint Pout = Pid + shift;
+		ofVec3f shift = N*(Breadth/2.0f);		
+		ofVec3f shiftN = shift.getNormalized();
+		ofPoint Pin = Pid - shift + shiftN*Offset;
+		ofPoint Pout = Pid + shift + shiftN*Offset;
 
 		M->addVertex(Pin);
 		M->addVertex(Pout);
 		idVt += 2;
 				
-		ofVec2f Tcin(idSec,0.0f);
-		ofVec2f Tcout(idSec,1.0f);
+		float u = dist/Breadth;
+
+		ofVec2f Tcin(u,0.0f);
+		ofVec2f Tcout(u,1.0f);
 		M->addTexCoord(Tcin);
 		M->addTexCoord(Tcout);
 
@@ -289,3 +299,5 @@ void ofxSDPathTiler::posPathTox0y0()
 		}
 	}
 }
+
+

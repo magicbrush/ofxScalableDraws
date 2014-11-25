@@ -31,6 +31,7 @@ public:
 	ofPtr<ofBaseDraws> getDTile() const { return DTile; }
 	void setDTile(ofPtr<ofBaseDraws> val);
 	void setPath(ofPath& pth);
+	void setPolyline(ofPolyline& p);
 	void addPolyline(ofPolyline& p);	
 
 	void posPathTox0y0();

@@ -71,7 +71,7 @@ void ofApp::mouseReleased(int x, int y, int button){
 	if(PTiler.use_count()==0)
 	{
 		PTiler.reset(
-			new ofxSDPathTiler(ITile,PMouse));
+			new ofxSDPathTiler(ITile,PMouse,20.0f,60.0f,20.0f));
 	}
 	else
 	{

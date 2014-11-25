@@ -19,6 +19,9 @@
     <ClCompile Include="..\src\ofxSDUtils.cpp">
       <Filter>addons\ofxScalableDraws\src</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\ofxSDPathTiler.cpp">
+      <Filter>addons\ofxScalableDraws\src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="src">
@@ -51,6 +54,9 @@
       <Filter>addons\ofxScalableDraws\src</Filter>
     </ClInclude>
     <ClInclude Include="..\src\ofxSDUtils.h">
+      <Filter>addons\ofxScalableDraws\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ofxSDPathTiler.h">
       <Filter>addons\ofxScalableDraws\src</Filter>
     </ClInclude>
   </ItemGroup>
