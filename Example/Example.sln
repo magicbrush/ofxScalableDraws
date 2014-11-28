@@ -10,6 +10,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "EX_ofxSDTile", "..\EX_ofxSD
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "EX_ofxSDPathTiler", "..\EX_ofxSDPathTiler\EX_ofxSDPathTiler.vcxproj", "{7FD42DF7-442E-479A-BA76-D0022F99702A}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "EX_ofxSDGrid", "..\EX_ofxSDGrid\EX_ofxSDGrid.vcxproj", "{A2E8072F-F42C-4FC6-BF46-8E7F5A920547}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -36,6 +38,10 @@ Global
 		{7FD42DF7-442E-479A-BA76-D0022F99702A}.Debug|Win32.Build.0 = Debug|Win32
 		{7FD42DF7-442E-479A-BA76-D0022F99702A}.Release|Win32.ActiveCfg = Release|Win32
 		{7FD42DF7-442E-479A-BA76-D0022F99702A}.Release|Win32.Build.0 = Release|Win32
+		{A2E8072F-F42C-4FC6-BF46-8E7F5A920547}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A2E8072F-F42C-4FC6-BF46-8E7F5A920547}.Debug|Win32.Build.0 = Debug|Win32
+		{A2E8072F-F42C-4FC6-BF46-8E7F5A920547}.Release|Win32.ActiveCfg = Release|Win32
+		{A2E8072F-F42C-4FC6-BF46-8E7F5A920547}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

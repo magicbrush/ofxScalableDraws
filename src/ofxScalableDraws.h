@@ -6,5 +6,6 @@
 #include "ofxSDCornerEdgeFill.h"
 #include "ofxSDRectFrame.h"
 #include "ofxSDPathTiler.h"
+#include "ofxSDGrid2D.h"
 
 #endif
