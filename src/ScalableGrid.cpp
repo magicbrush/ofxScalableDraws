@@ -39,6 +39,8 @@ void ScalableGrid::init( vector<Section> Secs, float anchor )
 	Anchor = anchor;
 	Sections = Secs;
 
+	Length = 0.0f;
+
 	resetTempValues();
 
 
@@ -173,11 +175,11 @@ void ScalableGrid::computeAbsoluteSectionLengths()
 		Section Sec = *it;
 		if(Sec.ScaleType == SCALE_RELATIVE)
 		{
-			TotalFixLen += Sec.Length;
+			TotalScaleLen += Sec.Length;			
 		}	
 		else if(Sec.ScaleType == SCALE_ABSOLUTE)
 		{
-			TotalScaleLen += Sec.Length;
+			TotalFixLen += Sec.Length;
 		}
 	}
 
@@ -203,6 +205,7 @@ float ScalableGrid::getAnchor()
 
 void ScalableGrid::resetTempValues()
 {
+
 	TotalScaleLen = 0.0f;
 	TotalFixLen = 0.0f;
 	absTotalScaleLen = 0.0f;
