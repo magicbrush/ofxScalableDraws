@@ -39,7 +39,6 @@ void ofApp::draw(){
 		Bar3x3R.width,
 		Bar3x3R.height);
 
-
 	ofPushStyle();
 	ofSetColor(0);
 	string S0 = "pressing 1 + mouse dragging: reposition horizontal bar";
@@ -256,7 +255,7 @@ void ofApp::linkBaseDraws()
 	Bar3x3->setBaseDraw(1,0,TTop);
 	Bar3x3->setBaseDraw(2,0,IRightTop);
 	Bar3x3->setBaseDraw(0,1,TLeft);
-	Bar3x3->setBaseDraw(1,1,TFill);
+	Bar3x3->setBaseDraw(1,1,BarVer);
 	Bar3x3->setBaseDraw(2,1,TRight);
 	Bar3x3->setBaseDraw(0,2,ILeftBot);
 	Bar3x3->setBaseDraw(1,2,TBot);

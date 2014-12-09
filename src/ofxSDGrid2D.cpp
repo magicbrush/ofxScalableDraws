@@ -2,7 +2,15 @@
 #include "ScalableGrid.h"
 
 
-ofPtr<ofxSDGrid2D<3,3> > gen3x3Grid( float x /*= 0.0f*/, float y /*= 0.0f*/, float topRatio /*= 20.0f*/, float middleRatio/*= 60.0f*/, float bottomRatio/*= 20.0f*/, float leftRatio /*= 20.0f*/, float centerRatio/*= 60.0f*/, float rightRatio/*= 20.0f*/ )
+ofPtr<ofxSDGrid2D<3,3> > gen3x3Grid( 
+	float x /*= 0.0f*/, 
+	float y /*= 0.0f*/, 
+	float topRatio /*= 20.0f*/, 
+	float middleRatio/*= 60.0f*/, 
+	float bottomRatio/*= 20.0f*/, 
+	float leftRatio /*= 20.0f*/,
+	float centerRatio/*= 60.0f*/,
+	float rightRatio/*= 20.0f*/ )
 {
 	ScalableGrid gRow;
 	gRow.setAnchor(y);
@@ -27,7 +35,13 @@ ofPtr<ofxSDGrid2D<3,3> > gen3x3Grid( float x /*= 0.0f*/, float y /*= 0.0f*/, flo
 	return pGD;
 }
 
-ofPtr<ofxSDGrid2D<1,3> > gen3GridVertical( float x /*= 0.0f*/, float y /*= 0.0f*/, float height /*= 30.0f*/, float leftRatio /*= 20.0f*/, float centerRatio/*= 60.0f*/, float rightRatio/*= 20.0f*/ )
+ofPtr<ofxSDGrid2D<1,3> > gen3GridVertical( 
+	float x /*= 0.0f*/,
+	float y /*= 0.0f*/, 
+	float height /*= 30.0f*/, 
+	float leftRatio /*= 20.0f*/, 
+	float centerRatio/*= 60.0f*/,
+	float rightRatio/*= 20.0f*/ )
 {
 	ScalableGrid gCol(height,1,y);
 	gCol.setSectionScaleType(0,ScalableGrid::SCALE_RELATIVE);
@@ -46,7 +60,13 @@ ofPtr<ofxSDGrid2D<1,3> > gen3GridVertical( float x /*= 0.0f*/, float y /*= 0.0f*
 	return pGD;
 }
 
-ofPtr<ofxSDGrid2D<3,1> > gen3GridHorizontal( float x /*= 0.0f*/, float y /*= 0.0f*/, float width /*= 30.0f*/, float topRatio /*= 20.0f*/, float middleRatio/*= 60.0f*/, float bottomRatio/*= 20.0f*/ )
+ofPtr<ofxSDGrid2D<3,1> > gen3GridHorizontal( 
+	float x /*= 0.0f*/,
+	float y /*= 0.0f*/, 
+	float width /*= 30.0f*/, 
+	float topRatio /*= 20.0f*/, 
+	float middleRatio/*= 60.0f*/,
+	float bottomRatio/*= 20.0f*/ )
 {
 	ScalableGrid gCol;
 	gCol.setAnchor(y);
@@ -64,3 +84,4 @@ ofPtr<ofxSDGrid2D<3,1> > gen3GridHorizontal( float x /*= 0.0f*/, float y /*= 0.0
 	pGD.reset(new ofxSDGrid2D<3,1>(gRow,gCol));
 	return pGD;
 }
+
