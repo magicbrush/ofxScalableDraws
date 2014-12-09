@@ -7,5 +7,6 @@
 #include "ofxSDRectFrame.h"
 #include "ofxSDPathTiler.h"
 #include "ofxSDGrid2D.h"
+#include "ofxSDChained.h"
 
 #endif
